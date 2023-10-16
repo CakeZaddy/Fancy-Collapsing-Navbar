@@ -1,0 +1,23 @@
+li {
+  /* margin-right: var(--margin-right);
+  width: var(--width); */
+  --width: 90px;
+  --margin-right: 10px;
+  --x-space: calc(var(--width) + var(--margin-right));
+  --start-x-position: calc(var(--x-space) * var(--index) * -1);
+  --offset: calc(var(--index) * 6px);
+}
+
+.landing.collapsed li {
+  left: calc(var(--start-x-position) + var(--offset));
+  transition: all 0.3s ease-in-out;
+}
+
+.landing:hover li {
+  left: 0;
+}
+
+.landing.collapsed:not(:hover) .home {
+  color: black;
+  font-weight: 800;
+}
